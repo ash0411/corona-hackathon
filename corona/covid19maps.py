@@ -8,7 +8,7 @@ Original file is located at
 """
 
 #install the library google places
-!pip install python-google-places
+#!pip install python-google-places
 
 #import the required library
 from googleplaces import GooglePlaces, types, lang 
@@ -16,8 +16,8 @@ import requests
 import json
 
 #use api keys for makking the rquest
-API_KEY='AIzaSyCQ-YokzoFHZQ-iTxnCjQ3Ipx2w3cfn3w4'
-
+#API_KEY='AIzaSyCQ-YokzoFHZQ-iTxnCjQ3Ipx2w3cfn3w4'
+API_KEY = 'AIzaSyBXxEqeeifFE9Kzybugg25z_a7lRO9dE-8'
 #initiate the api keys
 google_places = GooglePlaces(API_KEY)
 
@@ -31,8 +31,8 @@ if query_result.has_attributions:
 #itrate the search result
 #print the types of places and get detail of them
 for place in query_result.places: 
-     print(type(place)) 
-     place.get_details() 
+    print(type(place)) 
+    place.get_details() 
     print (place.name) 
     print("Latitude", place.geo_location['lat']) 
     print("Longitude", place.geo_location['lng']) 
